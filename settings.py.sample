@@ -1,0 +1,34 @@
+PLATFORM = 'linux' # other: 'macos'
+
+GIT = {
+    'NAME': "Chuck Norris",
+    'EMAIL': "gmail@chucknorris.com",
+    'SENDEMAIL': """    smtpserver = smtp.gmail.com
+    smtpserverport = 587
+    smtpencryption = tls
+    smtpuser = gmail@chucknorris.com""",
+}
+
+HG = {
+    'USERNAME': "Chuck Norris <gmail@chucknorris.com>"
+}
+
+ZSH = {
+    'EDITOR': 'vim',
+    'BROWSER': 'chromium',
+}
+
+
+
+REGISTER_CONFIGS = (
+    # ('recipe_name', {'options': ..}),
+    # or
+    # 'recipe_name', see recipes folder
+    'tmux',
+    'hg',
+    ('git', GIT),
+    ('zsh', ZSH),
+    'vim',
+    'python'
+
+)

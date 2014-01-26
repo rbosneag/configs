@@ -1,6 +1,6 @@
 [user]
-	name = Mihnea Dobrescu-Balaur
-	email = mihnea@linux.com
+	name = {{NAME}}
+	email = {{EMAIL}}
 [color]
 	branch = auto
 	diff = auto
@@ -13,9 +13,8 @@
 [push]
 	default = current
 [sendemail]
-	smtpserver = smtp.gmail.com
-	smtpserverport = 587
-	smtpencryption = tls
-	smtpuser = mihneadb@gmail.com
+{{SENDEMAIL}}
 [alias]
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+{{EXTRA}}

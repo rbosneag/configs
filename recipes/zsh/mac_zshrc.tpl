@@ -42,43 +42,29 @@ ZSH_THEME="dieter"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(command-not-found compleat django git gnu-utils\
+plugins=(brew osx command-not-found compleat django git gnu-utils\
     history-substring-search lein mercurial python colored-man\
-    colorize history-substring-search node npm \
+    colorize history-substring-search node npm\
     pip sublime web-search golang heroku safe-paste vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+export PATH="/usr/local/bin:/sbin:/usr/sbin:/bin:/usr/bin"
 # extend path
 while read line; do
     export PATH="$line:$PATH"
 done < ~/.paths
 
 source ~/.aliases
-export EDITOR=vim
-export BROWSER=firefox
+export EDITOR={{EDITOR}}
+export BROWSER={{BROWSER}}
 unsetopt correct_all
 
 export TERM=xterm-256color
 
 export PYTHONSTARTUP=~/.pythonrc
 
-# disable MMB paste
-#xmodmap -e "pointer = 1 9 3 4 5 6 7 8 2"
-
-# Press to select trackpoint
-#sudo sh -c "echo -n 1 > /sys/devices/platform/i8042/serio1/press_to_select"
-
-# Just scroll with MMB
-#xmodmap -e "pointer = 1 9 3 4 5 6 7 8 2" &> /dev/null
-
-#eval `dircolors ~/.dircolors-solarized/dircolors.ansi-light`
-
-# trackpoint values
-#sudo su -c 'echo -n 120 > /sys/devices/platform/i8042/serio1/serio2/speed'
-#sudo su -c 'echo -n 250 > /sys/devices/platform/i8042/serio1/serio2/sensitivity'
-
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+export LANG=en_US.UTF-8
 
