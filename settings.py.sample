@@ -25,7 +25,7 @@ REGISTER_CONFIGS = (
     # or
     # 'recipe_name', see recipes folder
     'tmux',
-    'hg',
+    ('hg', HG),
     ('git', GIT),
     ('zsh', ZSH),
     'vim',
