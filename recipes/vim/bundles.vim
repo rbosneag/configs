@@ -19,6 +19,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'mattn/emmet-vim'
 Bundle 'Gundo'
+Bundle 'tpope/vim-fugitive'
 
 " lang specific
 Bundle "pangloss/vim-javascript"
