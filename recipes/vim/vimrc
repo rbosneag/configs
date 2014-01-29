@@ -118,5 +118,11 @@ set backspace=indent,eol,start
 
 let g:ycm_confirm_extra_conf = 0
 
+
+"" Ultisnips
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsListSnippets="<c-s-j>"
+
+
 let javascript_enable_domhtmlcss = 1
 

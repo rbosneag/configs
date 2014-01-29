@@ -24,6 +24,8 @@ Bundle 'tpope/vim-fugitive'
 " lang specific
 Bundle "pangloss/vim-javascript"
 Bundle 'Valloric/YouCompleteMe'
+" snippets for YouCompleteMe
+Bundle "SirVer/ultisnips"
 Bundle 'guns/vim-clojure-static'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'wting/rust.vim'

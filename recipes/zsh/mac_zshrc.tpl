@@ -66,5 +66,8 @@ export TERM=xterm-256color
 
 export PYTHONSTARTUP=~/.pythonrc
 
+# Ctrl+Q erases but keeps command in history
+bindkey "^Q" push-input
+
 export LANG=en_US.UTF-8
 

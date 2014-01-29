@@ -65,6 +65,9 @@ export TERM=xterm-256color
 
 export PYTHONSTARTUP=~/.pythonrc
 
+# Ctrl+Q erases but keeps command in history
+bindkey "^Q" push-input
+
 # disable MMB paste
 #xmodmap -e "pointer = 1 9 3 4 5 6 7 8 2"
 
