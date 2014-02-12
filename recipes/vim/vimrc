@@ -31,9 +31,10 @@ set cursorline
 set showmatch
 set incsearch
 set hlsearch
+nnoremap <F3> :set hlsearch!<CR>
 set ruler
 set autoread
-set mouse=a
+" set mouse=a
 set cc=80
 
 set nowrap
@@ -52,7 +53,7 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 " Gotosymbol Ctrl+R
 map <C-R> :CtrlPBufTagAll<CR>
 " scan ALL the files
-"let g:ctrlp_max_files = 0
+let g:ctrlp_max_files = 0
 
 " Detect Indent
 let g:detectindent_preferred_expandtab = 1
