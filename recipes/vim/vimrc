@@ -51,9 +51,9 @@ let g:ctrlp_working_path_mode = '' " or 'rc'
 " Mixed mode
 let g:ctrlp_cmd = 'CtrlPMixed'
 " Gotosymbol Ctrl+R
-map <C-R> :CtrlPBufTagAll<CR>
+" map <C-R> :CtrlPBufTagAll<CR>
 " scan ALL the files
-let g:ctrlp_max_files = 0
+" let g:ctrlp_max_files = 0
 
 " Detect Indent
 let g:detectindent_preferred_expandtab = 1
