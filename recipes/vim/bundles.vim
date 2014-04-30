@@ -23,7 +23,7 @@ Plugin 'Gundo'
 Plugin 'tpope/vim-fugitive'
 
 " lang specific
-Plugin "pangloss/vim-javascript"
+Plugin 'pangloss/vim-javascript'
 Plugin 'Valloric/YouCompleteMe'
 " snippets for YouCompleteMe
 " Plugin "SirVer/ultisnips"
