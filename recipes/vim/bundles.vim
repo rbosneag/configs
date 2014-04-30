@@ -5,36 +5,36 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " general
-Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
-Bundle 'bitc/vim-bad-whitespace'
-Bundle 'ciaranm/detectindent'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
-Bundle 'troydm/easybuffer.vim'
-Bundle 'jnurmine/Zenburn'
-Bundle 'mileszs/ack.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'mattn/emmet-vim'
-Bundle 'Gundo'
-Bundle 'tpope/vim-fugitive'
+Plugin 'gmarik/vundle'
+Plugin 'kien/ctrlp.vim'
+Plugin 'bitc/vim-bad-whitespace'
+Plugin 'ciaranm/detectindent'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'majutsushi/tagbar'
+Plugin 'troydm/easybuffer.vim'
+Plugin 'jnurmine/Zenburn'
+Plugin 'mileszs/ack.vim'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'mattn/emmet-vim'
+Plugin 'Gundo'
+Plugin 'tpope/vim-fugitive'
 
 " lang specific
-" Bundle "pangloss/vim-javascript"
-Bundle 'Valloric/YouCompleteMe'
+Plugin "pangloss/vim-javascript"
+Plugin 'Valloric/YouCompleteMe'
 " snippets for YouCompleteMe
-Bundle "SirVer/ultisnips"
-Bundle 'marijnh/tern_for_vim'
+" Plugin "SirVer/ultisnips"
+" Plugin 'marijnh/tern_for_vim'
 
-Bundle 'tpope/vim-markdown'
-"Bundle 'psykidellic/vim-jekyll'
-"Bundle 'tpope/vim-liquid'
+Plugin 'tpope/vim-markdown'
+" Plugin 'psykidellic/vim-jekyll'
+" Plugin 'tpope/vim-liquid'
 
-"Bundle 'digitaltoad/vim-jade'
+" Plugin 'digitaltoad/vim-jade'
 
-"Bundle 'guns/vim-clojure-static'
+" Plugin 'guns/vim-clojure-static'
 
 filetype plugin indent on
-
