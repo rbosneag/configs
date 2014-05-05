@@ -45,7 +45,7 @@ ZSH_THEME="dieter"
 plugins=(brew osx command-not-found compleat django git gnu-utils\
     history-substring-search lein mercurial python colored-man\
     colorize history-substring-search node npm\
-    pip sublime web-search golang heroku safe-paste vagrant)
+    pip sublime web-search golang heroku vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
