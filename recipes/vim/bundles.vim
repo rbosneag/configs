@@ -21,6 +21,8 @@ Plugin 'Lokaltog/vim-powerline'
 Plugin 'mattn/emmet-vim'
 Plugin 'Gundo'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-surround'
 
 " lang specific
 Plugin 'pangloss/vim-javascript'

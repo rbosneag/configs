@@ -52,8 +52,11 @@ let g:ctrlp_working_path_mode = '' " or 'rc'
 let g:ctrlp_cmd = 'CtrlPMixed'
 " Gotosymbol Ctrl+R
 " map <C-R> :CtrlPBufTagAll<CR>
-" scan ALL the files
-" let g:ctrlp_max_files = 0
+" do not scan all the files
+let g:ctrlp_max_files = 500
+" and use .gitignore
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
 
 " Detect Indent
 let g:detectindent_preferred_expandtab = 1
@@ -90,6 +93,10 @@ map <leader>b :EasyBufferToggle<CR>
 set completeopt=longest,menuone
 
 noremap <F5> :GundoToggle<CR>
+
+" insert new line without leaving Visual mode
+nmap <S-Enter> O<Esc>j
+nmap <CR> o<Esc>k
 
 " command mode smartcase completion
 set ignorecase
