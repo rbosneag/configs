@@ -36,6 +36,7 @@ set ruler
 set autoread
 " set mouse=a
 set cc=80
+nnoremap gp `[v`]
 
 set nowrap
 set showmatch
@@ -53,9 +54,9 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 " Gotosymbol Ctrl+R
 " map <C-R> :CtrlPBufTagAll<CR>
 " do not scan all the files
-let g:ctrlp_max_files = 500
+let g:ctrlp_max_files = 2000
 " and use .gitignore
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+"let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 
 " Detect Indent
