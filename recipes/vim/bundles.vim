@@ -39,4 +39,6 @@ Plugin 'tpope/vim-markdown'
 
 " Plugin 'guns/vim-clojure-static'
 
+Plugin 'jhradilek/vim-rng'
+
 filetype plugin indent on
