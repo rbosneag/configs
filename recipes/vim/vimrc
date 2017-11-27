@@ -4,7 +4,6 @@ source ~/.bundles.vim
 set nocompatible
 set modeline
 
-set relativenumber            "RB: relative line numbers
 "set spell
 
 " leader comma
@@ -13,15 +12,6 @@ let mapleader = ","
 set laststatus=2
 "set encoding=utf-8
 
-if has("gui_macvim")
-  set guifont=Source\ Code\ Pro:h12
-"else
-  ""set guifont=Inconsolata\ Medium\ 13
-  ""set guifont=Ubuntu\ Mono\ 13
-  ""set guifont=Consolas\ 11
-  "set guifont=Source\ Code\ Pro\ Medium\ 10
-endif
-
 colors zenburn
 
 set hidden
@@ -29,10 +19,10 @@ set hidden
 syntax on
 set number
 set cursorline
-set showmatch
-set incsearch
-set hlsearch
-nnoremap <F3> :set hlsearch!<CR>
+"set showmatch				"RB moved below
+"set incsearch				"RB moved below
+"set hlsearch				"RB moved below
+"nnoremap <F3> :set hlsearch!<CR>	"RB moved below
 set ruler
 set autoread
 " set mouse=a
@@ -128,8 +118,8 @@ set backspace=indent,eol,start
 
 let g:ycm_confirm_extra_conf = 0
 
-""  RB disabled (activates Virtual_Env
-" for python command completion relative to Virt_env)
+" # RB disabled, dadeau eroare (activeaza Virtual_Env
+" pentru command completion relativ la Virt_env)
 "python << EOF
 "import sys, vim, os
 "ve_dir = vim.eval('$VIRTUAL_ENV')
@@ -146,3 +136,45 @@ let g:UltiSnipsListSnippets="<c-s-j>"
 
 
 let javascript_enable_domhtmlcss = 1
+
+"RB personal preferences
+" see http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+set relativenumber                  	" relative line numbers
+set undofile                        	" undo even after file is closed
+set gdefault				" global substitution on lines
+
+set ignorecase				" search case insensitive...
+set smartcase				" ...unless typing caps
+
+set incsearch				" incremental search
+set showmatch				" show search matches
+set hlsearch				" and highlight all results
+"nnoremap <leader><space> :noh<cr>	" stop highlighting or, better, toggle:
+nnoremap <leader><space> :set hlsearch!<CR>
+
+
+"tab key matches bracket pair instead of %
+nnoremap <tab> %
+vnoremap <tab> %
+
+"au FocusLost * :wa			" save file on lost focus (ie:cmd+tab)
+
+"some more shortcuts
+" ,a - launch Ack (to be switched to ag)
+nnoremap <leader>a :Ack!<space>
+
+" ,w - new vertical split and switch to it
+nnoremap <leader>w <C-w>v<C-w>l
+
+" ctrl+hjkl - navigate between split windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" replace Ack with Ag
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+"RB 'till here
