@@ -9,7 +9,7 @@ set modeline
 " leader comma
 let mapleader = ","
 
-set laststatus=2
+"set laststatus=2                       "RB moved below
 "set encoding=utf-8
 
 colors zenburn
@@ -18,20 +18,20 @@ set hidden
 
 syntax on
 set number
-set cursorline
-"set showmatch				"RB moved below
-"set incsearch				"RB moved below
-"set hlsearch				"RB moved below
-"nnoremap <F3> :set hlsearch!<CR>	"RB moved below
-set ruler
+"set cursorline                         "RB moved below
+"set showmatch	           			    "RB moved below
+"set incsearch				            "RB moved below
+"set hlsearch				            "RB moved below
+"nnoremap <F3> :set hlsearch!<CR>	    "RB moved below
+"set ruler                              "RB moved below
 set autoread
 " set mouse=a
-set cc=80
+"set cc=80                              "RB moved below
 nnoremap gp `[v`]
 
 set nowrap
-set showmatch
-set smartcase
+"set showmatch                          "RB moved below
+"set smartcase                          "RB moved below
 
 set smarttab
 
@@ -114,7 +114,7 @@ else " no gui
   endif
 endif
 
-set backspace=indent,eol,start
+"set backspace=indent,eol,start                   " RB moved below 
 
 let g:ycm_confirm_extra_conf = 0
 
@@ -149,6 +149,40 @@ set smartcase				" ...unless typing caps
 set incsearch				" incremental search
 set showmatch				" show search matches
 set hlsearch				" and highlight all results
+
+set scrolloff=3                         " lines to see above/below current line
+
+" set tabs to 4 spaces
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set autoindent                          " indent same as above line
+
+set showmode                            " shows current mode in status line
+set showcmd                             " shows typed commands in status bar
+
+set hidden                              " keeps crr unsaved file when new one
+
+set wildmenu                            " command completion 
+set wildmode=list:longest               " expand wildmenu
+
+set visualbell                          " flash screen instead of beeping
+set cursorline                          " highlight current line
+
+set ttyfast                             " for fast connections
+set ruler                               " shows crr line/col
+set backspace=indent,eol,start          " delete indent, line breaks, pre-exist
+set laststatus=2                        " always show statusbar
+
+" not yet clear
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=80
+
+
+
 "nnoremap <leader><space> :noh<cr>	" stop highlighting or, better, toggle:
 nnoremap <leader><space> :set hlsearch!<CR>
 
@@ -158,6 +192,7 @@ nnoremap <tab> %
 vnoremap <tab> %
 
 "au FocusLost * :wa			" save file on lost focus (ie:cmd+tab)
+"
 
 "some more shortcuts
 " ,a - launch Ack (to be switched to ag)
