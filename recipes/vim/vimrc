@@ -176,7 +176,7 @@ set backspace=indent,eol,start          " delete indent, line breaks, pre-exist
 set laststatus=2                        " always show statusbar
 
 " not yet clear
-set wrap
+set nowrap
 set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=80
@@ -225,6 +225,12 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+
+" ,W - strip all trailing whitespace in current file
+" What the heck is that? :-o
+"nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+" c - is for confirmation; e - is to supress errors
+nnoremap <leader>W :%s/\s\+$//ec
 "RB 'till here
 
 "RB swap the order of /usr/bin and /usr/local/bin such that we don't get
